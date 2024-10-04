@@ -1,0 +1,33 @@
+.list-cell {
+    -fx-padding: 5px;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3A3252 2%, #AD5FFC 60%, #76E5F7 90%, #76E5F7 120%);
+    -fx-font-family: "Agency FB";
+    -fx-font-size: 18px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-border-radius: 2px;
+    -fx-border-width: 2px;
+    -fx-border-color: #000000;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #3A3252;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #76E5F7;
+    -fx-text-fill: #000000;
+}
+
+.list-cell:filled:selected:hover {
+    -fx-background-color: #AD5FFC;
+}
+
+.list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-radius: 0px;
+    -fx-border-width: 0px;
+    -fx-border-color: transparent;
+}
+
+/*linear-gradient(from 0% 0% to 100% 100%, #3A3252 2%, #AD5FFC 60%, #76E5F7 90%, #76E5F7 120%)*/

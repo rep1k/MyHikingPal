@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #1A1422 2%, #9932EB 60%, #4ED1F0 90%, #4ED1F0 120%);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myhikingpal.controller.MapSceneController">
+   <children>
+      <ImageView fitHeight="78.0" fitWidth="724.0" layoutX="76.0" layoutY="522.0">
+         <image>
+            <Image url="@../imgs/MapSceneSVG.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="109.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Map">
+         <font>
+            <Font name="Agency FB Bold" size="34.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="545.0" layoutY="15.0" prefHeight="461.0" prefWidth="230.0">
+         <children>
+            <Text fx:id="timeText" fill="#ffbb1c" layoutX="80.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Agency FB Bold" size="32.0" />
+               </font>
+               <effect>
+                  <Glow level="0.4" />
+               </effect>
+            </Text>
+            <Label layoutX="11.0" layoutY="11.0" text="Difficulty" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="46.0" text="Route lenght" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="114.0" text="Time" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="150.0" text="Weather" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="263.0" text="Transport" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text fx:id="diff" fill="WHITE" layoutX="175.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select map">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font></Text>
+            <Text fx:id="routeDist" fill="WHITE" layoutX="176.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select map">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font></Text>
+            <Text fx:id="routeTime" fill="WHITE" layoutX="143.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select map">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font></Text>
+            <Text fx:id="routeWeather" fill="WHITE" layoutX="176.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NULL">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font></Text>
+            <Label layoutX="10.0" layoutY="80.0" text="Days" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text fx:id="routeDays" fill="WHITE" layoutX="176.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select map">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font></Text>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="212.0" layoutY="155.0">
+               <image>
+                  <Image url="@../imgs/temperature-celsius.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="weatherIcon" fitHeight="38.0" fitWidth="52.0" layoutX="106.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true" />
+            <RadioButton fx:id="carToToggle" layoutX="17.0" layoutY="331.0" mnemonicParsing="false" text="Car">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toDestination" />
+               </toggleGroup>
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="trainToToggle" layoutX="17.0" layoutY="357.0" mnemonicParsing="false" text="Train" toggleGroup="$toDestination">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="busToToggle" layoutX="17.0" layoutY="383.0" mnemonicParsing="false" text="Bus" toggleGroup="$toDestination">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="taxiToToggle" layoutX="17.0" layoutY="409.0" mnemonicParsing="false" text="Taxi" toggleGroup="$toDestination">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="carFromToggle" layoutX="149.0" layoutY="331.0" mnemonicParsing="false" text="Car">
+               <toggleGroup>
+                  <ToggleGroup fx:id="fromDestination" />
+               </toggleGroup>
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="trainFromToggle" layoutX="149.0" layoutY="357.0" mnemonicParsing="false" text="Train" toggleGroup="$fromDestination">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="busFromToggle" layoutX="149.0" layoutY="383.0" mnemonicParsing="false" text="Bus" toggleGroup="$fromDestination">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="taxiFromToggle" layoutX="149.0" layoutY="409.0" mnemonicParsing="false" text="Taxi" toggleGroup="$fromDestination">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font></RadioButton>
+            <Label layoutX="16.0" layoutY="301.0" text="To:" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="301.0" text="From:" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="436.0" text="Total:" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="totalMoney" fill="WHITE" layoutX="149.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="money">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="map" fitHeight="379.0" fitWidth="437.0" layoutX="111.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../maps/Empty_map.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="125.0" layoutY="8.0">
+         <image>
+            <Image url="@../imgs/walk.png" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="routeSelect" layoutX="109.0" layoutY="77.0" opacity="0.28" prefHeight="30.0" prefWidth="203.0" />
+      <Button id="menuButton" layoutX="602.0" layoutY="480.0" mnemonicParsing="false" onAction="#startHikeBttn" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #FFBE1C;" text="Start Hike">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="40.0" radius="19.5" width="40.0">
+               <input>
+                  <Glow level="0.4" />
+               </input>
+               <color>
+                  <Color red="1.0" green="0.7450980544090271" blue="0.10980392247438431" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Agency FB Bold" size="23.0" />
+         </font>
+      </Button>
+      <Text fx:id="hikeError" fill="#ffde00" fontSmoothingType="LCD" layoutX="111.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="436.5999755859375">
+         <font>
+            <Font name="Agency FB Bold" size="24.0" />
+         </font>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.32575758117617987" startY="0.27272730162649444">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9473684430122375" green="0.1122807040810585" blue="0.1122807040810585" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="3.0" fill="#140f1a" height="600.0" layoutX="-1.0" layoutY="1.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="81.0" />
+      <Button id="menuButton" layoutX="17.0" layoutY="237.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #4ED1F0;">
+         <font>
+            <Font name="Agency FB" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="78.0" fitWidth="87.0" layoutX="5.0" layoutY="11.0">
+         <image>
+            <Image url="@../imgs/miniLogov3.png" />
+         </image>
+      </ImageView>
+      <Button id="menuButton" layoutX="17.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #9932EB;" />
+      <ImageView layoutX="28.0" layoutY="243.0" mouseTransparent="true">
+         <image>
+            <Image url="@../imgs/HouseMain.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="30.0" layoutY="549.0" mouseTransparent="true">
+         <image>
+            <Image url="@../imgs/logoutLogout.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="27.0" layoutY="289.0" mouseTransparent="true">
+         <image>
+            <Image url="@../imgs/mapMap.png" />
+         </image>
+      </ImageView>
+      <Button id="menuButton" disable="true" layoutX="17.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchToCurrentProgress" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #4ED1F0;" />
+      <ImageView layoutX="28.0" layoutY="335.0">
+         <image>
+            <Image url="@../imgs/chart-donut-4.png" />
+         </image>
+      </ImageView>
+      <Button id="menuButton" layoutX="17.0" layoutY="284.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #FFBE1C;">
+         <effect>
+            <DropShadow height="40.0" radius="19.5" width="40.0">
+               <input>
+                  <Glow level="0.4" />
+               </input>
+               <color>
+                  <Color red="1.0" green="0.7450980544090271" blue="0.10980392247438431" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <ImageView layoutX="28.0" layoutY="290.0" mouseTransparent="true">
+         <image>
+            <Image url="@../imgs/mapMap.png" />
+         </image>
+      </ImageView>
+      <Button id="menuButton" layoutX="17.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #4ED1F0;" />
+      <ImageView layoutX="28.0" layoutY="380.0" mouseTransparent="true">
+         <image>
+            <Image url="@../imgs/messagesReviews.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
