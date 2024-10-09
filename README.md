@@ -17,4 +17,23 @@ zastaviť počas turistiky aby si užívateľ oddýchol a následne pokračoval 
 Po dokončení turistiky môže daný užívateľ poskytnút recenziu na danú trasu
 pre ostatných užívateľov. Taktiež aplikácia zaznamenáva všetky podstúpené
 turistiky a všetky výdavky spojené s ňou.
+## Design
+
+## Mozne cesty
+![image](https://github.com/user-attachments/assets/e0f9dd06-fa67-4ac9-9f12-e4631a116e03)
+
+## Hlavna Obrazovka
+![image](https://github.com/user-attachments/assets/1c90d6d4-87d5-4094-a613-f1a5c5d99ebd)
+
+## Planovacia Obrazovka
+![image](https://github.com/user-attachments/assets/e72181a8-c386-4165-bbd4-f91a8a5fb1cd)
+
+## Trackovacia Obrazovka
+![image](https://github.com/user-attachments/assets/fa9b18f2-975f-4b6e-a247-4c52932a95b2)
+
+## Recenzie
+![image](https://github.com/user-attachments/assets/245958e3-0a3f-49c8-871c-b67e98e44dc8)
+
+## Prihlasovacia Obrazovka
+![image](https://github.com/user-attachments/assets/53acae21-1f7c-4c94-ade6-0aed7798e549)
 
